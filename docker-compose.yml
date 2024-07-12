@@ -1,0 +1,26 @@
+#For express app
+
+version: '3'
+services:
+  app:
+    build:
+      context: ./express-docker-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./express-docker-app:/app
+    command: npm run dev
+
+
+
+## For koa App
+# version: '3'
+# services:
+#   app:
+#     build:
+#       context: ./koa-docker-app
+#     ports:
+#       - "5000:5000"
+#     volumes:
+#       - ./koa-docker-app:/app
+#     command: npm run dev
